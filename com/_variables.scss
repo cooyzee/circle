@@ -1,0 +1,74 @@
+@mixin size($with, $height: $with) {
+  width: $with;
+  height: $height;
+}
+
+@mixin shadow {
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 2px 1px -1px rgba(0,0,0,.12);
+}
+
+@mixin text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin multi-ellipsis($n) {
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $n;
+  -webkit-box-orient: vertical;
+}
+
+@mixin padding($size) {
+  .p-#{$size} {
+    padding: $size + px;
+  }
+  .px-#{$size} {
+    padding-left: $size + px;
+    padding-right: $size + px;
+  }
+  .py-#{$size} {
+    padding-top: $size + px;
+    padding-bottom: $size + px;
+  }
+  .pl-#{$size} {
+    padding-left: $size + px;
+  }
+  .pr-#{$size} {
+    padding-right: $size + px;
+  }
+  .pt-#{$size} {
+    padding-top: $size + px;
+  }
+  .pb-#{$size} {
+    padding-bottom: $size + px;
+  }
+}
+
+@mixin margin($size) {
+  .m-#{$size} {
+    margin: $size + px;
+  }
+  .mx-#{$size} {
+    margin-left: $size + px;
+    margin-right: $size + px;
+  }
+  .my-#{$size} {
+    margin-top: $size + px;
+    margin-bottom: $size + px;
+  }
+  .ml-#{$size} {
+    margin-left: $size + px;
+  }
+  .mr-#{$size} {
+    margin-right: $size + px;
+  }
+  .mt-#{$size} {
+    margin-top: $size + px;
+  }
+  .mb-#{$size} {
+    margin-bottom: $size + px;
+  }
+}

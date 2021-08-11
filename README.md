@@ -1,2 +1,2 @@
 # circle
-Cooyzee's React component library
+Cooyzee's React component library.
