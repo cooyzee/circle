@@ -1,0 +1,10 @@
+@import "../../com/variables";
+
+.circle-badge {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $blue;
+  font-size: 24px;
+}
