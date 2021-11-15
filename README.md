@@ -10,3 +10,4 @@ Cooyzee's React component library.
 > * jsx会自动转义，全部转换为字符串，防止XSS攻击  
 > * 组件名必须以大写字母开头
 > * 所有React组件都必需像纯函数一样保护它们的props不被更改
+

@@ -8,8 +8,8 @@ module.exports = (env) => {
     mode: env.production ? 'production' : 'development',
     entry: './src/index.js',
     output: {
-      filename: '[name].js',
-      chunkFilename: '[name].js',
+      filename: env.production ? '[name].[chunkhash:8].js' : '[name].js',
+      chunkFilename: env.production ? '[name].[chunkhash:8].js' : '[name].js',
       path: path.resolve(__dirname, 'dist'),
       publicPath: '/',
     },
@@ -26,7 +26,7 @@ module.exports = (env) => {
             loader: 'babel-loader',
             options: {
               presets: ['@babel/preset-react', '@babel/preset-env'],
-              plugins: ['react-refresh/babel']
+              plugins: [!env.production && 'react-refresh/babel'].filter(item => item !== false)
             }
           }
         }
@@ -37,10 +37,10 @@ module.exports = (env) => {
         template: './src/index.html'
       }),
       new MiniCssExtractPlugin({
-        filename: "app.css",
+        filename: env.production ? 'app.[contenthash:8].css' : 'app.css',
       }),
-      new ReactRefreshWebpackPlugin()
-    ],
+      !env.production && new ReactRefreshWebpackPlugin()
+    ].filter(item => item !== false),
     optimization: {
       splitChunks: {
         cacheGroups: { // 创建一个 vendors chunk，其中包括整个应用程序中 node_modules 的所有代码

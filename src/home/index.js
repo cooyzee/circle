@@ -1,5 +1,4 @@
 import React,{ useEffect } from 'react'
-import { CircleBadge, Badge } from '../../com/badge'
 import './index.scss'
 
 export default function index() {
@@ -10,9 +9,7 @@ export default function index() {
 
   return (
     <div className="container">
-      <h4 className="h4">This is index.</h4>
-      <CircleBadge>C</CircleBadge>
-      <Badge>Cooyzee</Badge>
+      <h4 className="h4">This is the index.</h4>
     </div>
   )
 }
