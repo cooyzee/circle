@@ -16,7 +16,16 @@ export default function App() {
         <Route path="/" element={<Layout />}>
           <Route path="home" element={<Home />} />
           <Route path="css/*" element={<Css />} />
+          <Route
+            index
+            element={
+              <section><h4>Welcome</h4></section>
+            }
+          />
         </Route>
+        <Route path="*" element={
+          <h2>no matches</h2>
+        } />
       </Routes>
     </Router>
   )
