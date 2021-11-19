@@ -9,7 +9,14 @@ export default function index() {
 
   return (
     <div className="container">
-      <h4 className="h4">This is the index.</h4>
+      <p>Exploring React tech and all the new things accompany:</p>
+      <ol>
+        <li>React 17</li>
+        <li>Fast refresh for react hot load</li>
+        <li>React router 6</li>
+        <li>Server side render with koa</li>
+        <li>CSS tricks</li>
+      </ol>
     </div>
   )
 }

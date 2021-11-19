@@ -1,0 +1,22 @@
+@import "../../com/variables";
+
+.layout {
+  .nav {
+    display: flex;
+    height: 40px;
+    @include shadow();
+    padding: 0 10px;
+    a {
+      color: $gray-600;
+      text-decoration: none;
+      padding: 0 10px 5px;
+      display: flex;
+      align-items: flex-end;
+      border-bottom: 2px solid transparent;
+      &.active {
+        color: $blue;
+        border-color: $blue;
+      }
+    }
+  }
+}
