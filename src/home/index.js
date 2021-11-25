@@ -1,11 +1,23 @@
-import React,{ useEffect } from 'react'
+import React,{ useState, useEffect } from 'react'
 import './index.scss'
+import HorizontalNav from '../../com/HorizontalNav'
+import '../../com/HorizontalNav/style.scss'
+
+const navItems= [
+  'Nav One',
+  'Nav Two',
+  'Nav Three',
+  'Nav Four',
+  'Nav Five',
+  'Nav Six',
+  'Nav Seven',
+  'Nav Eight',
+  'Nav Nine',
+]
 
 export default function index() {
 
-  useEffect(function () {
-    console.log('cmp did mount aa')
-  }, [])
+  const [navIndex, setNavIndex] = useState(0)
 
   return (
     <div className="container">
@@ -17,6 +29,10 @@ export default function index() {
         <li>Server side render with koa</li>
         <li>CSS tricks</li>
       </ol>
+      <h4>Auto horizontal navigation</h4>
+      <HorizontalNav index={navIndex} setIndex={index => setNavIndex(index)} className="custom-nav">
+        {navItems.map((nav, i) => <li key={i}>{nav}</li>)}
+      </HorizontalNav>
     </div>
   )
 }

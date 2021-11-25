@@ -1,0 +1,32 @@
+@import "../variables";
+
+.com-horizontal-nav {
+  overflow-x: hidden;
+  border-bottom: 1px solid #ebebeb;
+  .com-horizontal-wrap {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    width: max-content;
+    padding: 0 10px;
+  }
+  .com-horizontal-item {
+    flex: none;
+    padding-top: 10px;
+    padding-bottom: 4px;
+    margin: 0 10px;
+  }
+  .com-horizontal-active {
+    position: absolute;
+    height: 2px;
+    background-color: $blue;
+    left: 0;
+    bottom: 0;
+    &.forward {
+      transition: left 0.2s 0.1s, right 0.2s;
+    }
+    &.backward {
+      transition: left 0.2s, right 0.2s 0.1s;
+    }
+  }
+}

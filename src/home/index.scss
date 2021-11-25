@@ -1,50 +1,7 @@
 @import "../../com/variables";
 
-.target {
-  @include size(60px);
-  border-radius: 50%;
-  background: #fafafa;
-  margin: 105px;
-  box-shadow: 0 0 0 10px #E8E2D6, 0 0 0 20px #E1D9C9,
-  0 0 0 30px #D9CFBB, 0 0 0 40px #D2C6AE,
-  0 0 0 50px #CABCA0, 0 0 0 60px #C3B393,
-  0 0 0 70px #BBA985, 0 0 0 80px #B4A078;
-  outline: #B4A078 dashed 1px;
-  outline-offset: -10px;
-}
-
-.test {
-  background: red;
-  border: 2px solid rgba(12, 23, 255, .5);
-  background-clip: padding-box;
-}
-
-.test1 {
-  margin-top: 10px;
-  border: 5px solid #17a2b8;
-  border-radius: 20px;
-  outline: 2px solid #007bff;
-}
-
-.progress {
-  margin-top: 10px;
-  height: 16px;
-  border-radius: 24px;
-  background: rgba(180, 160, 120, .2);
-  .progress-bg {
-    width: 60%;
-    height: inherit;
-    border-radius: 24px;
-    background: repeating-linear-gradient(-45deg, #D9CFBB  25%, #C3B393 0, #C3B393 50%, #D9CFBB 0, #D9CFBB 75%, #C3B393 0);
-    background-size: 16px 16px;
-    //animation: panoramic 20s linear infinite;
-  }
-}
-.radial-gradient {
-  margin-top: 10px;
-  @include size(100px);
-  border-radius: 50%;
-  background: conic-gradient(lime 33.3%, yellow 36% 66.6%, red 0);
+.custom-nav {
+  margin: 0 -15px;
 }
 
 
