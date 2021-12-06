@@ -19,6 +19,10 @@ export default function Gradient() {
         <strong>Conic gradient</strong>
       </p>
       <div className="gradient conic" />
+      <p>
+        <strong>Coupon Card</strong>
+      </p>
+      <div className="coupon-card" />
     </div>
   )
 }

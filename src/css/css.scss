@@ -53,6 +53,12 @@
       border-radius: 50%;
       background-image: conic-gradient($red 33.3%, $green 0 66.6%, $blue 0);
     }
+    .coupon-card {
+      width: 200px;
+      height: 120px;
+      background-image: radial-gradient(circle at 100px -8px, transparent 20px, #b4a078 21px);
+      box-shadow: 0 0 8px 0 rgba(0,0,0,.5);
+    }
   }
 
   // border
@@ -69,6 +75,59 @@
       outline: #B4A078 dashed 1px;
       outline-offset: -10px;
     }
+    .border-one-px {
+      height: 100px;
+      //background-color: #ebebeb;
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        @include size(100%);
+        border: 0.5px solid #000;
+        transform-origin: 0 0;
+      }
+    }
+    .border-radius {
+      margin-top: 10px;
+      @include size(100px);
+      background-color: #B4A078;
+      &.one {
+        width: 200px;
+        border-radius: 50% / 0 100%;
+      }
+    }
+    @media (min-resolution: 2dppx) {
+      .border-one-px::after {
+        @include size(200%);
+        transform: scale(0.5);
+      }
+    }
+    @media (min-resolution: 3dppx) {
+      .border-one-px::after {
+        @include size(300%);
+        transform: scale(0.333);
+      }
+    }
+  }
+
+  // ======== selector ==========
+  .test-css-selector {
+    >  :nth-child(1) {
+      background-color: green;
+    }
+    p + div {
+      font-weight: bold;
+    }
+    ul ~ p {
+      color: red;
+      font-style: italic;
+    }
+    p:first-child {
+      color: green;
+    }
+    p:first-of-type {
+      color: green;
+    }
   }
 }
 
@@ -77,3 +136,5 @@
     background-position: 200% 0;
   }
 }
+
+

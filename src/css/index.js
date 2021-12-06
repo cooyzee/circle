@@ -3,11 +3,13 @@ import {Routes, Route, NavLink} from 'react-router-dom'
 import {setActiveClass} from "../../com"
 import Gradient from './Gradient'
 import Border from './Border'
+import Selector from './Selector'
 import './css.scss'
 
 const cssNav = [
   'gradient',
   'border',
+  'selector',
 ]
 
 export default function CssRoute() {
@@ -21,6 +23,7 @@ export default function CssRoute() {
       <Routes>
         <Route path="gradient" element={<Gradient />} />
         <Route path="border" element={<Border />} />
+        <Route path="selector" element={<Selector />} />
       </Routes>
     </div>
   )
