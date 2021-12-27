@@ -1,4 +1,4 @@
-import React,{ useState, useEffect } from 'react'
+import React,{ useState } from 'react'
 import './index.scss'
 import HorizontalNav from '../../com/HorizontalNav'
 import '../../com/HorizontalNav/style.scss'
@@ -16,7 +16,6 @@ const navItems= [
 ]
 
 export default function index() {
-
   const [navIndex, setNavIndex] = useState(0)
 
   return (

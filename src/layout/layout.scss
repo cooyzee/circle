@@ -3,10 +3,12 @@
 .layout {
   .nav {
     display: flex;
-    height: 40px;
+    align-items: center;
+
     @include shadow();
     padding: 0 10px;
     a {
+      height: 40px;
       color: $gray-600;
       text-decoration: none;
       padding: 0 10px 5px;
@@ -16,6 +18,26 @@
       &.active {
         color: $blue;
         border-color: $blue;
+      }
+    }
+    .theme-switch {
+      margin-left: auto;
+      border: 1px solid #ddd;
+      width: 40px;
+      height: 11px;
+      border-radius: 10px;
+      .btn {
+        @include size(17px);
+        border: 1px solid #000;
+        border-radius: 50%;
+        position: relative;
+        top: -4px;
+        left: -1px;
+        background-color: #fff;
+        transition: left 0.3s;
+        &.right {
+          left: 22px;
+        }
       }
     }
   }

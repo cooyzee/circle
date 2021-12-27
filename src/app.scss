@@ -1,5 +1,14 @@
 @import "../com/variables";
 
+:root {
+  --text-color: #444;
+  --bg-color: #fff;
+}
+body.dark {
+  --text-color: #fff;
+  --bg-color: #000;
+}
+
 // reboot
 * {
   box-sizing: border-box;
@@ -11,6 +20,9 @@ body {
   margin: 0;
   line-height: 1.5;
   padding-bottom: 50px;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  transition: color 0.5s, background-color 0.5s;
 }
 
 .container {
