@@ -2,6 +2,7 @@ import React,{ useState } from 'react'
 import './index.scss'
 import HorizontalNav from '../../com/HorizontalNav'
 import '../../com/HorizontalNav/style.scss'
+import Modal from "../../com/Modal"
 
 const navItems= [
   'Nav One',
@@ -17,6 +18,7 @@ const navItems= [
 
 export default function index() {
   const [navIndex, setNavIndex] = useState(0)
+  const [isModal, setIsModal] = useState(false)
 
   return (
     <div className="container">
@@ -32,6 +34,11 @@ export default function index() {
       <HorizontalNav index={navIndex} setIndex={index => setNavIndex(index)} className="custom-nav">
         {navItems.map((nav, i) => <li key={i}>{nav}</li>)}
       </HorizontalNav>
+      <button onClick={() => setIsModal(true)}>Modal</button>
+      <Modal isShow={isModal}>
+        <h1>Hello</h1>
+        <button onClick={() => setIsModal(false)}>Close</button>
+      </Modal>
     </div>
   )
 }
